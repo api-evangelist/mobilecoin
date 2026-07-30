@@ -1,8 +1,16 @@
 aid: mobilecoin
 name: Mobilecoin
-description: Mobilecoin is a company surfaced as a portfolio company of general-catalyst, kindred-ventures,
-  multicoin-capital and added to the API Evangelist network as a stub for enrichment. This profile is
-  a lead awaiting the enrichment pipeline.
+description: >-
+  MobileCoin is a privacy-focused, mobile-first cryptocurrency and payments
+  network whose consumer wallet has since been rebranded as Sentz (send, save,
+  receive and earn in stablecoins, including the eUSD stablecoin). For
+  developers and exchanges, MobileCoin publishes the open-source Full-Service
+  Wallet API - a JSON-RPC 2.0 service (default 127.0.0.1:9090) that creates and
+  manages accounts, assigns addresses, builds/submits transactions against the
+  UTXO ledger, reads balances, and queries blocks and network status. It ships
+  first-party Python, Swift (iOS), Android, and Flutter SDKs plus a Python CLI,
+  with documentation on GitBook and open code across the mobilecoinofficial and
+  mobilecoinfoundation GitHub organizations.
 url: https://raw.githubusercontent.com/api-evangelist/mobilecoin/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,12 +20,51 @@ x-backed-by:
 - multicoin-capital
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+image: https://cdn.prod.website-files.com/652eb795295cf0f25eb7ab84/654e61ed4358885cde9b69ac_Opengraph.png
 tags:
 - Company
-apis: []
+- Cryptocurrency
+- Payments
+- Blockchain
+- Digital Wallet
+- Stablecoins
+- Privacy
+- JSON-RPC
+apis:
+- name: MobileCoin Full-Service Wallet API
+  description: >-
+    JSON-RPC 2.0 wallet backend for the MobileCoin network - manage accounts and
+    addresses, build and submit transactions, read balances, and query the
+    ledger and network status. Self-hosted; runs locally by default.
+  humanURL: https://mobilecoin.gitbook.io/full-service-api/
+  baseURL: http://127.0.0.1:9090/wallet/v2
+  tags:
+  - Cryptocurrency
+  - Payments
+  - Wallet
+  - JSON-RPC
+  properties:
+  - type: Documentation
+    url: https://mobilecoin.gitbook.io/full-service-api/
+  - type: APIReference
+    url: https://mobilecoin.gitbook.io/full-service-api/api-endpoints/v2
+  - type: GettingStarted
+    url: https://mobilecoin.gitbook.io/full-service-api/usage/getting-started
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -26,3 +73,68 @@ maintainers:
 common:
 - type: Website
   url: https://mobilecoin.com/
+- type: DeveloperPortal
+  url: https://www.sentz.com/developers
+- type: Documentation
+  url: https://mobilecoin.gitbook.io/full-service-api/
+- type: APIReference
+  url: https://mobilecoin.gitbook.io/full-service-api/api-endpoints/v2
+- type: GettingStarted
+  url: https://mobilecoin.gitbook.io/full-service-api/usage/getting-started
+- type: GitHubOrganization
+  url: https://github.com/mobilecoinofficial
+- type: Blog
+  url: https://www.sentz.com/blog
+- type: Support
+  url: https://intercom.help/sentzapp
+- type: TermsOfService
+  url: https://www.sentz.com/legal/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.sentz.com/legal/privacy-policy
+- type: LLMsTxt
+  url: llms/mobilecoin-llms.txt
+- type: WellKnown
+  url: well-known/mobilecoin-well-known.yml
+- type: SecurityTxt
+  url: well-known/mobilecoin-security.txt
+- type: Packages
+  url: packages/mobilecoin-packages.yml
+- type: SDKs
+  url: packages/mobilecoin-packages.yml
+- type: CLI
+  url: cli/mobilecoin-cli.yml
+- type: Authentication
+  url: authentication/mobilecoin-authentication.yml
+- type: Conventions
+  url: conventions/mobilecoin-conventions.yml
+- type: Conformance
+  url: conformance/mobilecoin-conformance.yml
+- type: ErrorCatalog
+  url: errors/mobilecoin-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/mobilecoin-lifecycle.yml
+- type: Deprecation
+  url: https://mobilecoin.gitbook.io/full-service-api/api-endpoints/v1
+- type: ChangeLog
+  url: changelog/mobilecoin-changelog.yml
+- type: MCPServer
+  url: mcp/mobilecoin-mcp.yml
+- type: DataModel
+  url: data-model/mobilecoin-data-model.yml
+- type: Sandbox
+  url: sandbox/mobilecoin-sandbox.yml
+- type: DomainSecurity
+  url: security/mobilecoin-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/mobilecoin-vulnerability-disclosure.yml
+- type: Security
+  url: https://www.sentz.com/developers/bug-bounties
+- type: AgentSkill
+  url: skills/mobilecoin-create-account-and-receive.md
+- type: AgentSkill
+  url: skills/mobilecoin-send-payment.md
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 19
+  pass: local-v1
