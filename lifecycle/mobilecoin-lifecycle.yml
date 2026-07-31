@@ -1,0 +1,29 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  https://mobilecoin.gitbook.io/full-service-api/ ,
+  https://github.com/mobilecoinofficial/full-service/releases
+versioning:
+  scheme: uri-path + semver software releases
+  current: v2
+  current_software: v2.10.10
+  docs: https://mobilecoin.gitbook.io/full-service-api/api-endpoints/v2
+deprecation:
+  policy_url: https://mobilecoin.gitbook.io/full-service-api/api-endpoints/v1
+  sunset_header: false
+  notes: >-
+    The v1 JSON-RPC method family is explicitly labelled "v1 (deprecated)" in
+    the documentation; v2 is the current surface. No RFC 8594 Sunset/Deprecation
+    HTTP headers are documented (the service is self-hosted and locally run).
+sla:
+  url: null
+  uptime_target: null
+  notes: >-
+    Full-Service is self-hosted by the integrator, so there is no provider SLA;
+    the FAQ documents how to check whether a running instance is operational.
+status_page: null
+release_governance:
+  proposals: MobileCoin Improvement Proposals (MCIP)
+  source_code: https://github.com/mobilecoinofficial/full-service
+deprecated_operations:
+  - v1 JSON-RPC method family (superseded by v2)

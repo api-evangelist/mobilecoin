@@ -1,0 +1,29 @@
+generated: '2026-07-20'
+method: searched
+source: https://mobilecoin.gitbook.io/full-service-api/
+format: json-rpc-2.0
+envelope:
+  field: error
+  shape: '{ "method": "...", "error": { "code": <int>, "message": "<string>", "data": {...} }, "jsonrpc": "2.0", "id": 1 }'
+  notes: >-
+    Full-Service returns errors in the JSON-RPC 2.0 "error" object. A successful
+    call returns a "result" object instead. The "data" member carries a
+    server_error string with the specific failure detail. This is not
+    RFC 9457 problem+json.
+problems:
+- category: transport
+  meaning: JSON-RPC parse / invalid request / method not found / invalid params
+  codes: [-32700, -32600, -32601, -32602, -32603]
+  notes: Standard JSON-RPC 2.0 protocol-level error codes.
+- category: application
+  meaning: >-
+    Full-Service domain failures (e.g. account not found, insufficient funds to
+    build a transaction, ledger not yet synced, TXO already spent, address not
+    b58-decodable). Returned with a descriptive message + data.server_error.
+  codes: []
+  notes: >-
+    Application errors are conveyed via message text and the data.server_error
+    string rather than a fixed numeric registry.
+faq:
+  operational_check: https://mobilecoin.gitbook.io/full-service-api/faq/how-do-i-check-if-full-service-is-operational
+  resolving_disputes: https://mobilecoin.gitbook.io/full-service-api/faq/resolve-disputes

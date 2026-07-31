@@ -1,0 +1,25 @@
+generated: '2026-07-20'
+method: searched
+source: https://mobilecoin.gitbook.io/full-service-api/usage/getting-started/environment-setup
+model: separate test network (TestNet) vs production (MainNet)
+description: >-
+  MobileCoin operates a public TestNet ledger that is fully separate from
+  MainNet. Full-Service is pointed at a network at startup via its peer and
+  ledger/tx-source configuration, so the same JSON-RPC surface runs against
+  either TestNet or MainNet. TestNet uses valueless test MOB, letting
+  integrators exercise account creation, address assignment, and the
+  build/submit transaction flow without real funds.
+environments:
+- name: TestNet
+  live: false
+  funds: valueless test MOB
+  configured_via: full-service --peer / --tx-source-url pointed at TestNet nodes
+- name: MainNet
+  live: true
+  funds: real MOB / eUSD
+  configured_via: full-service --peer / --tx-source-url pointed at MainNet nodes
+notes: >-
+  No hosted test cards or magic test tokens are published (MobileCoin is a
+  self-custodial blockchain wallet, not a card acquirer); the sandbox is the
+  TestNet ledger itself. Exact TestNet node URLs are published in the
+  full-service repository configuration - not reproduced here to avoid drift.

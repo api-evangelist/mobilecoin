@@ -1,0 +1,76 @@
+generated: '2026-07-20'
+method: derived
+source: https://mobilecoin.gitbook.io/full-service-api/api-endpoints/v2
+entities:
+- name: Account
+  description: >-
+    A wallet account associated with one AccountKey (a View keypair and a Spend
+    keypair).
+- name: AccountSecrets
+  description: The secret mnemonic / keys for an account, returned separately.
+- name: ViewOnlyAccount
+  description: An account imported with only the view key (cannot spend).
+- name: Address
+  description: >-
+    A public subaddress derived from the AccountKey (public View + Spend keys,
+    optional Fog materials); b58-encoded.
+- name: TXO
+  description: A Transaction Output in the UTXO ledger model.
+- name: Transaction
+  description: Inputs spent to mint new TXOs for a recipient.
+- name: TransactionLog
+  description: Record of a transaction constructed/sent (or received) by the wallet.
+- name: Confirmation
+  description: Confirmation number minted per TXO to prove sender-TXO association.
+- name: ReceiverReceipt
+  description: Confirmation number the recipient polls for transaction status.
+- name: PaymentRequest
+  description: A b58 payment-request code.
+- name: GiftCode
+  description: A one-time account holding a single TXO (v1 surface).
+- name: Block
+  description: Ledger primitive consisting of TXOs and Key Images.
+- name: WalletStatus
+  description: Aggregate overview of wallet contents.
+- name: NetworkStatus
+  description: Current network fee and total block count.
+relationships:
+- from: Account
+  to: Address
+  type: has_many
+  via: account subaddresses
+- from: Account
+  to: AccountSecrets
+  type: has_one
+  via: account key
+- from: Account
+  to: TXO
+  type: has_many
+  via: owned outputs
+- from: Address
+  to: TXO
+  type: has_many
+  via: outputs received at address
+- from: Transaction
+  to: TXO
+  type: has_many
+  via: inputs spent / outputs minted
+- from: Transaction
+  to: TransactionLog
+  type: has_one
+  via: recorded log
+- from: Transaction
+  to: Confirmation
+  type: has_many
+  via: per-minted-TXO confirmation
+- from: TXO
+  to: Block
+  type: belongs_to
+  via: block index
+- from: ReceiverReceipt
+  to: Confirmation
+  type: has_one
+  via: confirmation number
+id_conventions:
+  address_encoding: base58 (b58) public addresses and payment-request codes
+  ledger_model: UTXO (unspent transaction output)

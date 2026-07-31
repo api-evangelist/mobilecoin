@@ -1,0 +1,51 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  https://www.sentz.com/developers , https://github.com/mobilecoinofficial ,
+  PyPI, CocoaPods
+packages:
+- language: python
+  registry: pypi
+  name: mobilecoin
+  version: 2.3.1
+  url: https://pypi.org/project/mobilecoin/
+  install: pip install mobilecoin
+  official: true
+  source: https://github.com/mobilecoinofficial/full-service
+  description: >-
+    Python client library and CLI for the MobileCoin Full-Service Wallet
+    JSON-RPC API (create accounts, manage balances, build and submit
+    transactions). Requires a running local full-service instance.
+- language: swift
+  registry: cocoapods
+  name: MobileCoin
+  url: https://cocoapods.org/pods/MobileCoin
+  install: pod 'MobileCoin'
+  official: true
+  source: https://github.com/mobilecoinofficial/MobileCoin-Swift
+  description: iOS/Swift SDK for communicating with the MobileCoin network.
+- language: java
+  registry: github
+  name: android-sdk
+  url: https://github.com/mobilecoinofficial/android-sdk
+  official: true
+  source: https://github.com/mobilecoinofficial/android-sdk
+  description: >-
+    MobileCoin Android SDK - library to access the MobileCoin blockchain from
+    Android phones.
+- language: dart
+  registry: github
+  name: mobilecoin_flutter_plugin
+  url: https://github.com/mobilecoinofficial/mobilecoin_flutter_plugin
+  official: true
+  source: https://github.com/mobilecoinofficial/mobilecoin_flutter_plugin
+  description: Flutter plugin integrating MobileCoin blockchain access (not published to pub.dev).
+- language: rust
+  registry: github
+  name: full-service
+  url: https://github.com/mobilecoinofficial/full-service
+  official: true
+  source: https://github.com/mobilecoinofficial/full-service
+  description: >-
+    MobileCoin wallet backend service exposing the Full-Service JSON-RPC 2.0
+    API (the API the SDKs and CLI talk to).

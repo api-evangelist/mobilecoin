@@ -1,0 +1,25 @@
+generated: '2026-07-20'
+method: searched
+source: live probes of provider hosts
+hosts:
+- host: https://sentz.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: mobilecoin-security.txt
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://mobilecoin.gitbook.io
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+notes: >-
+  mobilecoin.com (301 -> sentz.com) returns the Sentz SPA HTML for
+  /.well-known/security.txt rather than a real RFC 9116 document; the
+  canonical security.txt is served at https://sentz.com/.well-known/security.txt.

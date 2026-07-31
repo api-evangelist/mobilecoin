@@ -1,0 +1,11 @@
+generated: '2026-07-20'
+method: generated
+api: MobileCoin Full-Service Wallet API (JSON-RPC 2.0)
+source: https://mobilecoin.gitbook.io/full-service-api/api-endpoints/v2
+skills:
+- file: mobilecoin-create-account-and-receive.md
+  name: Create an account and receive MobileCoin
+  operations: [create_account, assign_address_for_account, get_account_status, get_address_status]
+- file: mobilecoin-send-payment.md
+  name: Send a MobileCoin payment
+  operations: [build_and_submit_transaction, get_account_status, create_receiver_receipts, check_receiver_receipt_status]

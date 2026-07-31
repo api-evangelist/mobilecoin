@@ -1,0 +1,29 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  https://pypi.org/project/mobilecoin/ ,
+  https://github.com/mobilecoinofficial/full-service (python/)
+name: mobilecoin (mob CLI)
+description: >-
+  First-party Python command-line interface (and client library) for the
+  MobileCoin Full-Service Wallet. Wraps the Full-Service JSON-RPC 2.0 API to
+  create and manage accounts, view balances, and build/submit transactions
+  against a locally running full-service instance.
+requires: Python 3.10+ and a running full-service instance
+install:
+- method: pip
+  command: pip install mobilecoin
+package: packages/mobilecoin-packages.yml
+command_surface:
+- group: accounts
+  covers: [create, import, list, status, balance, remove]
+- group: transactions
+  covers: [build, submit, send]
+- group: address
+  covers: [assign, list, verify]
+- group: network
+  covers: [network-status, wallet-status, version]
+notes: >-
+  Command names above summarise the documented capability groups; the CLI is a
+  thin wrapper over the JSON-RPC methods catalogued in mcp/mobilecoin-mcp.yml.
+  The full-service backend binary itself is catalogued in packages/.

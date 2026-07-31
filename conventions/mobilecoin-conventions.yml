@@ -1,0 +1,46 @@
+generated: '2026-07-20'
+method: searched
+source: https://mobilecoin.gitbook.io/full-service-api/
+api: MobileCoin Full-Service Wallet API
+protocol: JSON-RPC 2.0
+transport:
+  style: single-endpoint JSON-RPC 2.0 over HTTP POST
+  default_host: 127.0.0.1
+  default_port: 9090
+  request_shape: '{ "method": "<method>", "params": {...}, "jsonrpc": "2.0", "id": 1 }'
+  content_type: application/json
+authentication:
+  style: optional X-API-KEY header (see authentication/mobilecoin-authentication.yml)
+idempotency:
+  supported: false
+  notes: >-
+    JSON-RPC methods carry no idempotency key. Transaction construction is a
+    two-phase build/submit flow (build_transaction then submit_transaction),
+    and receiver receipts / confirmation numbers provide de-duplication and
+    delivery verification rather than an idempotency contract.
+pagination:
+  style: offset-limit
+  params: [offset, limit]
+  applies_to: [get_txos, get_transaction_logs, get_blocks]
+  notes: TXO and transaction-log listings accept offset and limit parameters.
+versioning:
+  scheme: uri-path
+  current: v2
+  deprecated: [v1]
+  notes: >-
+    Two method families are exposed - v2 (current) and v1 (deprecated). The
+    software version is retrievable at runtime via the version method.
+error_envelope:
+  format: json-rpc-2.0
+  shape: '{ "error": { "code": <int>, "message": "<string>", "data": {...} }, "jsonrpc": "2.0", "id": 1 }'
+  see: errors/mobilecoin-problem-types.yml
+request_tracing:
+  request_id: JSON-RPC "id" field echoed in the response
+rate_limiting:
+  signaled: false
+  notes: Self-hosted local service; no provider-imposed rate limits.
+cross_links:
+  authentication: authentication/mobilecoin-authentication.yml
+  errors: errors/mobilecoin-problem-types.yml
+  lifecycle: lifecycle/mobilecoin-lifecycle.yml
+  data_model: data-model/mobilecoin-data-model.yml

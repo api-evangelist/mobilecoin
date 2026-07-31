@@ -1,0 +1,25 @@
+generated: '2026-07-20'
+method: derived
+source: https://mobilecoin.gitbook.io/full-service-api/
+standards:
+- id: json-rpc-2.0
+  conforms: true
+  evidence: >-
+    All endpoints are JSON-RPC 2.0 (method/params/jsonrpc/id request envelope,
+    error object with code/message/data).
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Errors use the JSON-RPC 2.0 error object, not application/problem+json.
+- id: oauth2
+  conforms: false
+  evidence: No OAuth2 flows; optional X-API-KEY header only.
+- id: openid-connect
+  conforms: false
+- id: rest
+  conforms: false
+  evidence: Single JSON-RPC endpoint, not resource-oriented REST.
+- id: tls
+  conforms: true
+  evidence: >-
+    Validator and mirror services document optional TLS; production website
+    hosts probe TLSv1.3 (see security/mobilecoin-domain-security.yml).

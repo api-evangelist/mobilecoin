@@ -1,0 +1,24 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/mobilecoinofficial/full-service/releases
+scheme: semver
+current_version: v2.10.10
+entries:
+- version: v2.10.10
+  date: '2026-04-27'
+- version: v2.10.9
+  date: '2026-02-12'
+- version: v2.10.8
+  date: '2026-02-11'
+- version: v2.10.7
+  date: '2025-07-08'
+- version: v2.10.6
+  date: '2025-03-31'
+- version: v2.10.5
+  date: '2024-12-04'
+- version: v2.10.4
+  date: '2024-09-20'
+notes: >-
+  Dated GitHub releases of the full-service wallet backend (the JSON-RPC API
+  server). Per-release change detail lives on each GitHub release page; this
+  artifact captures the recent version window.

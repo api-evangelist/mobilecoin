@@ -1,0 +1,71 @@
+generated: '2026-07-20'
+method: derived
+status: candidate
+source: https://mobilecoin.gitbook.io/full-service-api/api-endpoints/v2
+server:
+  name: mobilecoin-full-service
+  transport: stdio
+  url: null
+  notes: >-
+    No official MobileCoin MCP server was found. This is a candidate tool list
+    derived one-to-one from the Full-Service v2 JSON-RPC methods; a wrapper
+    could expose them as MCP tools against a local full-service instance.
+tools:
+- name: create_account
+  description: Create a new account (private keys) in the wallet.
+- name: import_account
+  description: Import an existing account from the secret entropy / mnemonic.
+- name: get_accounts
+  description: Get the details of all accounts in the wallet.
+- name: get_account_status
+  description: Get account status including account object and balance.
+- name: export_account_secrets
+  description: Export the secret mnemonic for an account.
+- name: assign_address_for_account
+  description: Assign a new subaddress to an account.
+- name: get_addresses
+  description: Get assigned addresses for an account.
+- name: get_address_status
+  description: Get the current balance for a given address.
+- name: verify_address
+  description: Verify an address is correctly b58-encoded.
+- name: build_transaction
+  description: Build a transaction to confirm contents before submitting.
+- name: submit_transaction
+  description: Submit a built transaction to the network.
+- name: build_and_submit_transaction
+  description: Build then submit a transaction in one call.
+- name: build_burn_transaction
+  description: Build a burn transaction.
+- name: build_unsigned_transaction
+  description: Build an unsigned transaction for the offline signer.
+- name: get_txo
+  description: Get details of a given TXO.
+- name: get_txos
+  description: List TXOs for an account with offset/limit.
+- name: get_confirmations
+  description: Get confirmation numbers for a transaction's TXOs.
+- name: check_receiver_receipt_status
+  description: Check the status of a receiver receipt.
+- name: create_receiver_receipts
+  description: Create receiver receipts for a tx proposal.
+- name: get_transaction_log
+  description: Get a transaction log record.
+- name: get_transaction_logs
+  description: List transaction logs for an account.
+- name: create_payment_request
+  description: Create a b58 payment-request code.
+- name: check_b58_type
+  description: Check the type of a b58 code.
+- name: get_block
+  description: Get a block from the ledger.
+- name: get_recent_blocks
+  description: Get the most recent blocks.
+- name: search_ledger
+  description: Search the ledger by block index, TXO public key, or key image.
+- name: get_network_status
+  description: Get the current status of the MobileCoin network.
+- name: get_wallet_status
+  description: Get the current status of the wallet.
+- name: version
+  description: Get the full-service software version.
