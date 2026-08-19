@@ -32,7 +32,7 @@ accessModel:
   - authentication
   generated: '2026-07-22'
   method: derived
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-20'
 image: https://cdn.prod.website-files.com/652eb795295cf0f25eb7ab84/654e61ed4358885cde9b69ac_Opengraph.png
