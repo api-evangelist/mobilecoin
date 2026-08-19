@@ -6,10 +6,9 @@ server:
   name: mobilecoin-full-service
   transport: stdio
   url: null
-  notes: >-
-    No official MobileCoin MCP server was found. This is a candidate tool list
-    derived one-to-one from the Full-Service v2 JSON-RPC methods; a wrapper
-    could expose them as MCP tools against a local full-service instance.
+  notes: No official MobileCoin MCP server was found. This is a candidate tool list derived one-to-one
+    from the Full-Service v2 JSON-RPC methods; a wrapper could expose them as MCP tools against a local
+    full-service instance.
 tools:
 - name: create_account
   description: Create a new account (private keys) in the wallet.
@@ -69,3 +68,9 @@ tools:
   description: Get the current status of the wallet.
 - name: version
   description: Get the full-service software version.
+deployment:
+  mode: none
+  verified: derived
+  tools: 29
+  checked: '2026-08-12'
+  source: catalog MCP census
