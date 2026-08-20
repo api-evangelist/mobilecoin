@@ -56,6 +56,11 @@ apis:
   tags:
   - Cryptocurrency
   - Payments
+  - Wallets
+  - JSON-RPC
+  tags_raw:
+  - Cryptocurrency
+  - Payments
   - Wallet
   - JSON-RPC
   properties:
