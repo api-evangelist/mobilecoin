@@ -33,15 +33,19 @@ deliveryModel:
   method: derived
 accessModel:
   pricing: unknown
-  onboarding: self-serve
+  onboarding: unknown
   trial: false
   try_now: false
   public: false
-  label: Self-serve signup
-  confidence: medium
+  label: Unknown
+  confidence: low
+  try_now_blocked_by: loopback
   source:
   - authentication
-  generated: '2026-07-22'
+  - security
+  - sandbox
+  - {url: 'https://mobilecoin.com/', status: 301, note: 'declared website redirects to https://www.sentz.com/ — a different registrable domain (mobilecoin.com -> sentz.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)'}
+  generated: '2026-09-03'
   method: derived
 specificationVersion: '0.23'
 created: '2026-07-17'
@@ -133,8 +137,9 @@ common:
   url: https://mobilecoin.gitbook.io/full-service-api/api-endpoints/v1
 - type: ChangeLog
   url: changelog/mobilecoin-changelog.yml
-- type: MCPServer
+- type: X-MCPServerCandidate
   url: mcp/mobilecoin-mcp.yml
+  note: 'Renamed from MCPServer 2026-09-03 (roadmap#247): the manifest self-describes as status: candidate — a tool list derived from the published API contracts, not an existing server. The scorer already read the manifest and reported mcp_server correctly; the MCPServer type was crediting the artifact-type surfaces with a server that does not exist.'
 - type: DataModel
   url: data-model/mobilecoin-data-model.yml
 - type: Sandbox
