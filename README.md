@@ -64,6 +64,100 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Mobilecoin is a company surfaced as a portfolio company of general-catalyst, kindred-ventures, multicoin-capital and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+MobileCoin is a privacy-focused, mobile-first cryptocurrency and payments network whose consumer wallet has since been rebranded as Sentz (send, save, receive and earn in stablecoins, including the eUSD stablecoin). For developers and exchanges, MobileCoin publishes the open-source Full-Service Wallet API - a JSON-RPC 2.0 service (default 127.0.0.1:9090) that creates and manages accounts, assigns addresses, builds/submits transactions against the UTXO ledger, reads balances, and queries blocks and network status. It ships first-party Python, Swift (iOS), Android, and Flutter SDKs plus a Python CLI, with documentation on GitBook and open code across the mobilecoinofficial and mobilecoinfoundation GitHub organizations.
 
-Backed by: general-catalyst, kindred-ventures, multicoin-capital — https://mobilecoin.com/
+**Areas:** Company · Cryptocurrency · Payments · Blockchain · Digital Wallet · Stablecoins · Privacy · JSON-RPC
+
+## Mobilecoin on APIs.io
+
+Everything profiled for Mobilecoin is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/mobilecoin/](https://apis.io/providers/mobilecoin/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [MobileCoin Full-Service Wallet API](https://apis.io/apis/mobilecoin/mobilecoin-full-service-wallet-api/) — JSON-RPC 2.0 wallet backend for the MobileCoin network - manage accounts and addresses, build and submit transactions, read balances, and query the ledger…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [mobilecoin-full-service](https://apis.io/servers/mobilecoin/mobilecoin-full-service/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Mobilecoin Authentication](https://apis.io/security/mobilecoin/mobilecoin-authentication/)
+- [Mobilecoin Domain Security](https://apis.io/security/mobilecoin/mobilecoin-domain-security/)
+- [Mobilecoin Vulnerability Disclosure](https://apis.io/security/mobilecoin/mobilecoin-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://mobilecoin.com/)
+- [Documentation](https://mobilecoin.gitbook.io/full-service-api/)
+- [Getting started](https://mobilecoin.gitbook.io/full-service-api/usage/getting-started)
+- [API reference](https://mobilecoin.gitbook.io/full-service-api/api-endpoints/v2)
+- [Support](https://intercom.help/sentzapp)
+- [Blog](https://www.sentz.com/blog)
+- [Security](https://www.sentz.com/developers/bug-bounties)
+- [Terms of service](https://www.sentz.com/legal/terms-of-service)
+- [Privacy policy](https://www.sentz.com/legal/privacy-policy)
+- [GitHub](https://github.com/mobilecoinofficial)
+
+## API Evangelist rating
+
+**Kin Score 34.2** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 80.4 |
+| Access clarity | 21.1 |
+
+**Agent readiness 6.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 27.7** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/mobilecoin/](https://apis.io/providers/mobilecoin/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Mobilecoin: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/mobilecoin/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
